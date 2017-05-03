@@ -23,9 +23,9 @@ GO
 
 IF NOT EXISTS (SELECT * FROM Environment)
 BEGIN
-	INSERT INTO Environment (EnvironmentID, Name, RecoveryModel) VALUES ('D','Development',3)
-	INSERT INTO Environment (EnvironmentID, Name, RecoveryModel) VALUES ('S','Staging',3)
-	INSERT INTO Environment (EnvironmentID, Name, RecoveryModel) VALUES ('P','Production',1)
+	INSERT INTO Environment (EnvironmentID, Name) VALUES ('D','Development')
+	INSERT INTO Environment (EnvironmentID, Name) VALUES ('S','Staging')
+	INSERT INTO Environment (EnvironmentID, Name) VALUES ('P','Production')
 END
 
 IF NOT EXISTS (SELECT * FROM ServerInstance)
